@@ -8,5 +8,12 @@ parser.add_argument("operation", choices=["add", "sub", "mul", "div"], help="Ope
 
 args = parser.parse_args()
 
-print(args)
-
+match args.operation:
+    case "add":
+        print(args.num1 + args.num2)
+    case "sub":
+        print(args.num1 - args.num2)
+    case "mul":
+        print(args.num1 * args.num2)
+    case "div":
+        print(args.num1 / args.num2)
